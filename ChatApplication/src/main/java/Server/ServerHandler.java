@@ -62,7 +62,7 @@ public class ServerHandler implements Runnable{
     public String Accepted(Socket socket) throws IOException {
 		DataInputStream dis = new DataInputStream(socket.getInputStream());
 		DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
-		dos.writeUTF("ClientA:"+name);
+		dos.writeUTF("A;"+name);
 		if (dis.readBoolean()) {
 			return dis.readUTF();
 		}else {

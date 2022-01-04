@@ -35,7 +35,7 @@ public class ClientConnected implements Runnable{
     public Socket createConnect() throws IOException {
         ServerSocket svSocket = new ServerSocket(0);
         out.writeUTF(svSocket.getLocalSocketAddress().toString());
-        System.out.println("Ä?ang chá»? client káº¿t ná»‘i");
+        System.out.println("...................");
         return svSocket.accept();
     }
     public Socket connect(String address) throws Exception{
@@ -66,7 +66,7 @@ public class ClientConnected implements Runnable{
                         chat.setVisible(true);
                     } else {
                         String address = in.readUTF();
-                        if (!address.equalsIgnoreCase("reject")) {
+                        if (!address.equalsIgnoreCase("refuse")) {
                             ChattingGUI chat = new ChattingGUI(connect(address), name, this.name);
                             chat.setVisible(true);
                         } else {

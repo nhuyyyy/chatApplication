@@ -36,6 +36,7 @@ public class ClientConnectedGUI extends javax.swing.JFrame {
         initComponents();
         txtName.setEditable(false);
         waitlb.setVisible(false);
+        txtName.setText(name);
     }
     
         
